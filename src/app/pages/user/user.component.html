@@ -1,0 +1,17 @@
+<div class="col s3">
+	<div class="card" appHover>
+	  <div class="card-image">
+	    <img src="{{user.image}}">
+	    <span class="card-title" [ngClass]="{marked : properties.marked}">{{user.name | uppercase}}</span>
+<!--	    <span class="card-title" [ngClass]="{marked : true}">{{user.name}}</span>-->
+	  </div>
+	  <div class="card-content">
+	    <p>{{user.geo}}</p>
+	  </div>
+	  <div class="card-action">
+      <a class="waves-effect waves-light btn"
+      (click)="onClick()"
+      >Отметить</a>
+	  </div>
+	</div>
+</div>

@@ -8,10 +8,18 @@ import { Component, OnInit, Input } from '@angular/core';
 export class UserComponent implements OnInit {
 
   @Input() user:object;
-  
+
+  properties:any= {
+    marked:false
+  }
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  onClick(){
+    this.properties.marked = !this.properties.marked;
   }
 
 }
